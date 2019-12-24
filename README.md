@@ -1,30 +1,30 @@
 # AngularAppNew
 
 ## Feature list
-Admin Login & Logout
-User Listing
-User Searching
-User Details
-User Addition
-User Update
-User Deletion
+ * Admin Login & Logout
+ * User Listing
+ * User Searching
+ * User Details
+ * User Addition
+ * User Update
+ * User Deletion
 
 ## Angular 6.1.1 features used
-Modules
-Routes
-Services
-Components
-Browser Animations
-Forms Module
-Reactive Forms
-Directives
-Pipes
-Filters
+ * Modules
+ * Routes
+ * Services
+ * Components
+ * Browser Animations
+ * Forms Module
+ * Reactive Forms
+ * Directives
+ * Pipes
+ * Filters
 
 ## Libraries Used
-Bootstrap4 front end design
-Font Awesome Icons
-Toster for Success/Error messages.
+ * Bootstrap3.3.7/ Bootstrap4 front end design
+ * Font Awesome Icons
+ * Toster for Success/Error messages
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
