@@ -1,0 +1,34 @@
+<br />
+<div class="card" style="background: #62c8f7;border: none;">
+  <div
+    class="card-body"
+    style="font-size: 1.2em;padding: 10px;color: white;font-weight: bold;"
+  >
+    View List
+  </div>
+</div>
+<br />
+
+
+<div class=""><br>
+  <h3 class="text-center">{{responseData.first_name}} {{responseData.last_name}}</h3>
+  <hr>
+  <table class="">
+    <tr>
+      <td><i class=" fa fa-user"></i>First Name</td>
+      <td>: <b>{{responseData.first_name}}</b></td>
+    </tr>
+    <tr>
+      <td><i class=" fa fa-user"></i>Last name</td>
+      <td>: <b>{{responseData.last_name}}</b></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-envelope-o"></i> Email Address</td>
+      <td>: <b>{{responseData.email}}</b></td>
+    </tr>
+    <tr>
+      <td><i class=" custom-icon fa fa-phone"></i> Phone</td>
+      <td>: <b>{{responseData.phone}}</b></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,50 @@
+<br />
+<div class="card" style="background: #62c8f7;border: none;">
+  <div
+    class="card-body"
+    style="font-size: 1.2em;padding: 10px;color: white;font-weight: bold;"
+  >
+    Add Data List
+  </div>
+</div>
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="logn__form">
+        <form [formGroup]="addForm" (ngSubmit)="doAdd()">
+          <!-- <h3>Login</h3> -->
+          <div class="form-group">
+            <label class="text-primary">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" placeholder="first name">
+            <div class="text-danger" *ngIf="(addForm.controls.firstName.dirty || addForm.controls.firstName.touched)">Please
+              enter valid email address</div>
+          </div>
+          <div class="form-group">
+            <label class="text-primary">Last Name</label>
+              <input type="text" class="form-control" formControlName="lastName" placeholder="last name">
+              <p class="text-danger" *ngIf="(addForm.controls.lastName.dirty || addForm.controls.lastName.touched)">Enter password</p>
+          </div>
+          <div class="form-group">
+            <label class="text-primary">Email</label>
+              <input type="text" class="form-control" formControlName="email" placeholder="email">
+              <p class="text-danger" *ngIf="(addForm.controls.email.dirty || addForm.controls.email.touched)">Enter password</p>
+          </div>
+          <div class="form-group">
+            <label class="text-primary">Phone No</label>
+              <input type="text" class="form-control" formControlName="phone" placeholder="phone no">
+              <p class="text-danger" *ngIf="(addForm.controls.phone.dirty || addForm.controls.phone.touched)">Enter password</p>
+          </div>
+          <button type="submit" class="btn btn-info btn-sm" [disabled]="!addForm.valid">Register</button>
+        </form>
+        <br>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

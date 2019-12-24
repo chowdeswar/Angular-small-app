@@ -1,0 +1,18 @@
+<nav id="main__nav">
+  <div style="text-align: center;">
+    <img src="assets/Images/favicon.png" class="main__logo">
+  </div>
+  <ul class="main_links">
+    <li routerLink="/">User List</li>
+    <li routerLink="/add">ADD User List</li>
+    <li (click)="logout()">Logout</li>
+  </ul>
+</nav>
+
+<section style="margin-left: 250px;">
+  <div class="">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

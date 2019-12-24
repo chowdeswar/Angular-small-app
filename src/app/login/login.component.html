@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="logn__form" style="width: 450px;margin: 0 auto;">
+        <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+          <h3>Login</h3>
+          <div class="form-group">
+            <label class="text-primary">Email</label>
+            <input type="email" class="form-control" formControlName="email">
+            <div class="text-danger" *ngIf="(loginForm.controls.email.dirty || loginForm.controls.email.touched)">Please
+              enter valid email address</div>
+          </div>
+          <div class="form-group">
+            <label class="text-primary">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+              <p class="text-danger" *ngIf="(loginForm.controls.password.dirty || loginForm.controls.password.touched)">Enter password</p>
+          </div>
+          <button type="submit" class="btn btn-info btn-sm" [disabled]="!loginForm.valid">Login</button>
+        </form>
+        <br>
+        <div class="">
+          <h4>Notes : </h4>
+          <p>Credentials : chow@hotmail.com &amp; admin123</p>
+          <p>All data will be restored when refreshed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

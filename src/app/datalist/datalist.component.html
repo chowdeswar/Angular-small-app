@@ -1,0 +1,58 @@
+<br />
+<div class="card" style="background: #62c8f7;border: none;">
+  <div
+    class="card-body"
+    style="font-size: 1.2em;padding: 10px;color: white;font-weight: bold;"
+  >
+    Data List
+  </div>
+</div>
+<br />
+
+<div class="Search_filter">
+  <label>Search: &nbsp;</label>
+  <input class="form-control input-sm" [(ngModel)]="filterData" type="text" placeholder="Search..." style="width:auto;display:inline-block">
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <!-- <th>ID</th> -->
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Department</th>
+        <th>View</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of (responseData | filter:filterData); let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ res.first_name }}</td>
+        <td>{{ res.last_name }}</td>
+        <td>{{ res.email }}</td>
+        <td>{{ res.phone }}</td>
+        <td>{{ res.department }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" [routerLink]="['view', i]">View</button>
+        </td>
+        <td>
+          <button class="btn btn-info btn-sm" [routerLink]="['update', i]">Update</button>
+        </td>
+        <td>
+          <button class="btn btn-warning btn-sm">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card-body" *ngIf="((responseData | filter:filterData).length == 0)">
+		<h3>Oh no</h3>
+		<p>No students found <span *ngIf="filterData"> with search "{{filterData}}"</span> </p>
+	</div>
+</div>
