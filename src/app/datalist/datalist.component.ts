@@ -22,4 +22,9 @@ export class DatalistComponent implements OnInit {
     console.log(this.responseData);
   }
 
+  deleteData(res, index) {
+    let data = this.UserService.deleteData(index);
+    this.getDataList();
+  }
+
 }

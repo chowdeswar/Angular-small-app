@@ -24,7 +24,7 @@ export class UserService {
   }
 
   getAllDataList() {
-    if(localStorage.getItem('DataList') && localStorage.getItem('DataList') != '') {
+    if (localStorage.getItem('DataList') && localStorage.getItem('DataList') != '') {
       return {
         code: 200,
         message: 'Data List fetched successfully',
@@ -41,12 +41,23 @@ export class UserService {
 
   fetchData(index) {
     let data = JSON.parse(localStorage.getItem('DataList'));
-    if(data) {
+    if (data) {
       return {
         code: 200,
         message: 'Data fecting successfully',
         data: data[index]
       }
+    }
+  }
+
+  deleteData(index) {
+    let data = JSON.parse(localStorage.getItem('DataList'));
+    data.splice(index, 1)
+    let remainData = localStorage.setItem('DataList', JSON.stringify(data))
+    return {
+      code: 200,
+      message:'success',
+      data: remainData
     }
   }
 }
